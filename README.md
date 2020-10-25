@@ -1,8 +1,5 @@
 # FX Rates App by [Arūnas Račelis][arunasracelis]
 
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
-
 ### Introduction
 
 This web application fulfills the following functionality requirements:
