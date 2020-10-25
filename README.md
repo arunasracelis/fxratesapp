@@ -32,5 +32,31 @@ This web application fulfills the following functionality requirements:
 * H2
 * Lombok
 
+
+```sh
+
+```
+
+### Notice
+
+* When app is started, it is accessible at standard http://localhost:8080/ 
+* Converter is accessible at http://localhost:8080/converter
+* Daily rates are accessible at http://localhost:8080/rates
+* H2 database is accessible at http://localhost:8080/h2-console Username: sa Password: password
+
+```sh
+
+```
+
+### Snapshots
+
+#### Index
+
+![alt text](https://github.com/arunasracelis/fxratesapp/blob/master/index.jpg)
+
+#### Converter
+
+
+
 [arunasracelis]: <http://www.arunasracelis.com>
 [lblt]: <http://www.lb.lt/webservices/FxRates/>
