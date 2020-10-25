@@ -20,7 +20,7 @@ This web application fulfills the following functionality requirements:
 * HTML
 * CSS
 * JS
-* Bootsrap
+* Bootstrap
 
 ### Backend
 
