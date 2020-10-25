@@ -56,7 +56,11 @@ This web application fulfills the following functionality requirements:
 
 #### Converter
 
+![alt text](https://github.com/arunasracelis/fxratesapp/blob/master/converter.jpg)
 
+#### Daily rates
+
+![alt text](https://github.com/arunasracelis/fxratesapp/blob/master/dailyrates.jpg)
 
 [arunasracelis]: <http://www.arunasracelis.com>
 [lblt]: <http://www.lb.lt/webservices/FxRates/>
