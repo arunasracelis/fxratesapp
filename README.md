@@ -11,6 +11,10 @@ This web application fulfills the following functionality requirements:
 * Use H2 database.
 * Use Java >= 1.7, Maven
 
+```sh
+
+```
+
 ### Frontend
 
 * HTML
