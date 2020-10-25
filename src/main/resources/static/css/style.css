@@ -1,0 +1,58 @@
+body {
+    background-color: #E1E7EE;
+}
+
+.app-jumbotron {
+    background-color: #406997;
+}
+
+.font-color-jumbotron {
+    color: #E1E7EE;
+}
+
+.hyperlink {
+    color: #E1E7EE;
+    text-decoration: underline;
+}
+
+.content {
+     margin-bottom: 50px;
+}
+
+.select {
+    width: 20em;
+    height:2em;
+    margin-bottom: 1em;
+}
+
+.datapicker {
+    width: 20em;
+    height:2em;
+    margin-bottom: 1em;
+}
+
+.rates-table {
+    width:25%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.container {
+  justify-content: center;
+}
+
+.user-message {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: darkblue;
+    font-weight: bold;
+    background-color: lightgoldenrodyellow;
+}
+
+.result-container {
+    margin-top: 1em;
+}
+.result-text {
+    text-align: center;
+    color:darkblue;
+}
