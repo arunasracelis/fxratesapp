@@ -12,7 +12,6 @@ This web application fulfills the following functionality requirements:
 * Use Java >= 1.7, Maven
 
 ```sh
-
 ```
 
 ### Frontend
@@ -34,7 +33,6 @@ This web application fulfills the following functionality requirements:
 
 
 ```sh
-
 ```
 
 ### Notice
@@ -45,7 +43,6 @@ This web application fulfills the following functionality requirements:
 * H2 database is accessible at http://localhost:8080/h2-console Username: sa Password: password
 
 ```sh
-
 ```
 
 ### Code Samples
