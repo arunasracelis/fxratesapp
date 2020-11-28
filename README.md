@@ -12,7 +12,6 @@ This web application fulfills the following functionality requirements:
 * Use Java >= 1.7, Maven
 
 ```sh
-
 ```
 
 ### Frontend
@@ -34,7 +33,6 @@ This web application fulfills the following functionality requirements:
 
 
 ```sh
-
 ```
 
 ### Notice
@@ -45,7 +43,33 @@ This web application fulfills the following functionality requirements:
 * H2 database is accessible at http://localhost:8080/h2-console Username: sa Password: password
 
 ```sh
+```
 
+### Code Samples
+```java
+@Configuration
+public class QuartzJobConfiguration {
+
+    private static final Logger logger = LogManager.getLogger(QuartzJobConfiguration.class);
+    private static final String CRON_SCHEDULE_EVERY_30_SECONDS = "0/30 * * ? * * *"; // <== for demo purposes only
+    private static final String CRON_SCHEDULE_MON_FRI_7AM = "0 0 7 ? * MON,TUE,WED,THU,FRI *"; // <== http://www.cronmaker.com/
+
+    @Bean
+    public JobDetail jobDetails() {
+        logger.info("Creating jobDetails bean in " + getClass().getName() + " class");
+        return JobBuilder.newJob(QuartzJob.class).withIdentity("getFXRates").storeDurably().build();
+    }
+
+    @Bean
+    public Trigger jobTrigger(JobDetail jobDetails) {
+        logger.info("Creating jobTrigger bean in " + getClass().getName() + " class");
+        return TriggerBuilder.newTrigger().forJob(jobDetails)
+                .withIdentity("QuartzTriggerForDailyFXRates")
+                .withSchedule(CronScheduleBuilder.cronSchedule(CRON_SCHEDULE_EVERY_30_SECONDS))
+                .build();
+    }
+
+}
 ```
 
 ### Snapshots
