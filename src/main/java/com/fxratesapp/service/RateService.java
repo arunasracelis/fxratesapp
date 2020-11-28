@@ -13,6 +13,9 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -71,9 +74,13 @@ public class RateService {
     private List<Rate> getRates(String requestURL) {
         List<Rate> rates = new ArrayList<>();
         try {
+            URL url = new URL(requestURL);
+            URLConnection urlConnection = url.openConnection();
+            urlConnection.setRequestProperty("User-Agent", "Mozilla 5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.11) ");
+            InputStream inputFile = urlConnection.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(requestURL);
+            Document document = builder.parse(inputFile);
             document.getDocumentElement().normalize();
 
             NodeList nodeList = document.getElementsByTagName("FxRate");
